@@ -60,7 +60,7 @@ namespace gutils {
 
     template<typename T>
     concept string_container = requires(T container) {
-        std::ranges::range<T> && (typeid(container.begin()) == typeid(string) || typeid(container.begin()) == typeid(string*));
+        requires std::ranges::range<T> && (typeid(container.begin()) == typeid(string) || typeid(container.begin()) == typeid(string*));
     };
 
     static constexpr size_t charSize = sizeof(char);
