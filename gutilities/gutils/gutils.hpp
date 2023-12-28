@@ -196,7 +196,7 @@ namespace gutils {
     }
 
     template<typename T>
-    static void appendVec(vector <T> &appendee, vector <T> &toAppend) {
+    static void appendVec(vector<T>& appendee, const vector <T>& toAppend) {
         appendee.insert(std::end(appendee), std::begin(toAppend), std::end(toAppend));
     }
 
